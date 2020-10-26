@@ -29,7 +29,8 @@ program hello
     
     ! ``RECORD /name/ variable'' becomes ``TYPE(name) variable''
     TYPE(item) pear, store_catalog(100)
-    INTEGER, dimension(3, 2)::x = (/ 1, 1, 2, 2, 3, 3 /)
+    INTEGER, dimension(3, 2)::x 
+    data x / 1, 1, 2, 2, 3, 3 /
     ! (/1, 2, 3/), /1, 2, 3/)
     ! size,
     ! print *, shape(x)
