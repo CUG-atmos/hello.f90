@@ -8,11 +8,10 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/main.exe",
+            "program": "${fileDirname}/main.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
+            "cwd": "${fileDirname}", //"${workspaceFolder}",
             "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
@@ -20,6 +19,14 @@
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "make build active file",
+            "environment": [
+                {
+                    "name": "LD_LIBRARY_PATH",
+                    "value": "/opt/anaconda3/lib"
+                    // "value": "${LD_LIBRARY_PATH}"
                 }
             ]
         }
