@@ -13,7 +13,8 @@
             "stopAtEntry": false,
             "cwd": "${fileDirname}", //"${workspaceFolder}",
             "externalConsole": false,
-            "MIMode": "gdb",
+            // "MIMode": "gdb",
+            "MIMode": "lldb",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -21,6 +22,7 @@
                     "ignoreFailures": true
                 }
             ],
+            "targetArchitecture": "x86_64",
             "preLaunchTask": "make build active file",
             "environment": [
                 {
